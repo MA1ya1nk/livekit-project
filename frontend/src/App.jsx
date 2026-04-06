@@ -9,6 +9,7 @@ import {
   UserDashboardLayout,
   BookSlot,
   MyBookings,
+  VoiceAssistant,
 } from './pages/dashboard/index';
 import {
   AdminDashboard,
@@ -97,6 +98,7 @@ function AppRoutes() {
       >
         <Route index element={<BookSlot />} />
         <Route path="bookings" element={<MyBookings />} />
+        <Route path="voice-agent" element={<VoiceAssistant />} />
       </Route>
       <Route
         path="/admin"

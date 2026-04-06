@@ -40,6 +40,14 @@ export default function UserDashboardLayout() {
           >
             My bookings
           </NavLink>
+          <NavLink
+            to="/dashboard/voice-agent"
+            className={({ isActive }) =>
+              `${tabClass} ${isActive ? 'bg-[#15803d] text-white shadow-sm' : 'text-[#5c636a] hover:text-[#1a1d21]'}`
+            }
+          >
+            Voice Agent
+          </NavLink>
         </div>
       </div>
       <main className="flex-1 min-h-0 overflow-auto flex flex-col">
