@@ -12,7 +12,6 @@ from app.api.bookings import router as bookings_router
 from app.api.users import router as users_router
 from app.api.voice import router as voice_router
 from app.api.superadmin import router as superadmin_router
-from app.api.livekit import router as livekit_router
 
 app = FastAPI(title=settings.app_name)
 app.add_middleware(
@@ -30,7 +29,6 @@ app.include_router(bookings_router, prefix="/api/bookings")
 app.include_router(users_router, prefix="/api/users")
 app.include_router(voice_router, prefix="/api")
 app.include_router(superadmin_router, prefix="/api/superadmin")
-app.include_router(livekit_router, prefix="/api")
 
 @app.get("/")
 def root():

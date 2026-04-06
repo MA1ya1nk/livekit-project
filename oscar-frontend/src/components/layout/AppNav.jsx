@@ -27,7 +27,6 @@ const ADMIN_NAV_ITEMS = [
 const USER_NAV_ITEMS = [
   { path: '/dashboard', label: 'Book' },
   { path: '/dashboard/bookings', label: 'My Bookings' },
-  { path: '/dashboard/voice-agent', label: 'Voice Agent' },
 ];
 
 const SUPERADMIN_NAV_ITEMS = [
