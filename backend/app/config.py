@@ -1,8 +1,14 @@
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 import os
 
 
 class Settings(BaseSettings):
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+    )
+
     # App
     app_name: str = "AI Assisted Booking System"
     debug: bool = os.getenv("DEBUG", False)
@@ -42,10 +48,6 @@ class Settings(BaseSettings):
     
     superadmin_email: str
     superadmin_password: str
-
-    class Config:
-        env_file = ".env"
-        env_file_encoding = "utf-8"
 
 
 settings = Settings()
